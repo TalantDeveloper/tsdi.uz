@@ -20,6 +20,7 @@ class Teacher(models.Model):  # Kafedradagi Ustozlar
 
     position = models.TextField(verbose_name="Ustoz haqida", null=True, blank=True)  # Translation
     academic_title = models.EmailField(verbose_name="Unvoni", null=True, blank=True)  # Translation
+    is_head = models.BooleanField(default=False, verbose_name="Kafedra mudirimi?")
 
     number = models.CharField(max_length=50, verbose_name="Telefon nomer", null=True, blank=True)
     email = models.CharField(max_length=50, verbose_name="Email", null=True, blank=True)
