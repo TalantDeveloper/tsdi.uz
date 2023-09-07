@@ -46,13 +46,21 @@ class ChairsShip(models.Model):  # Kefedralar va Fakultetlarni bog'lash klasi
         return f"{self.faculty} - {self.chair}"
 
 
+class Position(models.Model):
+    name = models.CharField(max_length=255, verbose_name='Lavozimi')  # Translation
+    sub_name = models.CharField(max_length=255, verbose_name='Sub name')
+
+    def __str__(self):
+        return self.name
+
+
 class Employee(models.Model):  # Fakultet xodimlari
     """Employees in Faculty at the Institute"""
     name = models.CharField(max_length=150, verbose_name="F.I.SH")
     image = models.ImageField(default="./fakultet/avatar.jpg", upload_to="./fakultet/", verbose_name='Rasm')
     fakultet = models.ForeignKey(Faculty, on_delete=models.CASCADE)
 
-    position = models.TextField(verbose_name="Lavozimi")  # Translation
+    position = models.ForeignKey(Position, on_delete=models.CASCADE)
     academic_title = models.TextField(verbose_name="Unvoni")  # Translation
     is_dean = models.BooleanField(default=False, verbose_name="Dekanmi?")
 

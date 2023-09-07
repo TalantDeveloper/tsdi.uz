@@ -10,6 +10,7 @@ urlpatterns = i18n_patterns(
     path('page/', include('page.urls')),  # Page app urls
     path('new/', include('new.urls')),  # New app urls
     path('admin/', admin.site.urls),  # Admin panels urls
+    path('uploads', include('ckeditor_uploader.urls')),
 
 )
 

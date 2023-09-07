@@ -97,7 +97,7 @@ MODELTRANSLATION_LANGUAGES = ('uz', 'en', 'ru')
 
 # Django Ckeditor Settings
 
-CKEDITOR_BASEPATH = '/static/ckeditor/'
+CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_CONFIGS = {
     'default': {

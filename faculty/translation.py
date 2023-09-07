@@ -1,4 +1,4 @@
-from .models import Chair, Teacher, Faculty, Employee
+from .models import Chair, Teacher, Faculty, Employee, Position
 from modeltranslation.translator import TranslationOptions, register
 
 
@@ -17,6 +17,11 @@ class FacultyTranslationOption(TranslationOptions):
     fields = ('name', 'content')
 
 
+@register(Position)
+class PositionTranslationOption(TranslationOptions):
+    fields = ('name',)
+
+
 @register(Employee)
 class EmployeeTranslationOption(TranslationOptions):
-    fields = ('position', 'academic_title')
+    fields = ('academic_title',)
