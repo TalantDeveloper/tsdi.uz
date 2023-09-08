@@ -9,7 +9,6 @@ class TeacherSerializer(ModelSerializer):
 
 
 class ChairSerializer(ModelSerializer):
-    teachers = TeacherSerializer(many=True, required=False)
 
     class Meta:
         model = Chair
@@ -24,7 +23,6 @@ class EmployeeSerializer(ModelSerializer):
 
 
 class FacultySerializer(ModelSerializer):
-    # employees = EmployeeSerializer(many=True, required=False)
 
     class Meta:
         model = Faculty
