@@ -11,7 +11,6 @@ urlpatterns = i18n_patterns(
     path('new/', include('new.urls')),  # New app urls
     path('admin/', admin.site.urls),  # Admin panels urls
     path('uploads', include('ckeditor_uploader.urls')),
-
 )
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # Static urls

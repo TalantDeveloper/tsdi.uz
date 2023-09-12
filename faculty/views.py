@@ -18,3 +18,13 @@ def faculties_view(request):
         'chair_data': chairs_serializer.data,
     }
     return Response(combined_data)
+
+
+@api_view(('GET', ))
+def chairs_view(request):
+    chairs = Chair.objects.all()
+    chair_serializer = ChairSerializer(chairs, many=True)
+    combined_data = {
+        'chair_data': chair_serializer.data
+    }
+    return Response(combined_data)
