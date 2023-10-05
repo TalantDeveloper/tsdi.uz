@@ -46,7 +46,6 @@ INSTALLED_APPS = [
 
 
     'rest_framework',  # Django Rest Framework
-    'rest_framework_swagger',
     'ckeditor',  # Django Ckeditor
     'ckeditor_uploader',  # Django Ckeditor Uploader
 
